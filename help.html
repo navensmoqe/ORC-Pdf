@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تعليمات الاستخدام - OCR App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --primary: #4A90D9;
+  --primary-light: #eff6ff;
+  --success: #22c55e;
+  --radius: 16px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Kufi Arabic', 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  background: var(--card);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover { transform: translateX(5px); }
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--text-secondary);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  border: 1px solid var(--border);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary);
+}
+
+.step-list {
+  list-style: none;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.step-number {
+  width: 35px;
+  height: 35px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.api-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.api-link:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.highlight-box {
+  background: #fff9eb;
+  border-right: 4px solid #f59e0b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.5rem; }
+  .card { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><strong>OCR App</strong></div>
+  <a href="index.html" class="back-btn">
+     العودة للتطبيق <i class="fa-solid fa-arrow-left"></i>
+  </a>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <h1>دليل استخدام تطبيق OCR</h1>
+    <p>تعرف على كيفية تحويل صورك وملفاتك إلى نصوص في ثوانٍ</p>
+  </div>
+
+  <div class="card">
+    <h2><i class="fa-solid fa-key"></i> الحصول على مفتاح API (Mistral)</h2>
+    <p style="margin-bottom: 20px;">يعتمد هذا التطبيق على تقنية ذكاء اصطناعي متطورة من Mistral AI، ولتشغيله تحتاج إلى مفتاح خاص بك:</p>
+    
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>زيارة منصة Mistral</h3>
+          <p>توجه إلى الموقع الرسمي لمنصة Mistral عبر الرابط التالي:</p>
+          <a href="https://console.mistral.ai/home" target="_blank" class="api-link">console.mistral.ai <i class="fa-solid fa-external-link"></i></a>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>إنشاء حساب</h3>
+          <p>قم بالتسجيل باستخدام بريدك الإلكتروني أو حساب Google الخاص بك.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>إنشاء مفتاح API</h3>
+          <p>من القائمة الجانبية، اختر <b>"API Keys"</b> ثم اضغط على زر <b>"Create New Key"</b>.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>نسخ المفتاح وتفعيله</h3>
+          <p>انسخ الكود الذي سيظهر لك، ثم اذهب إلى <b>إعدادات التطبيق</b> (أيقونة الترس) والصقه هناك.</p>
+          <div class="highlight-box">
+            <i class="fa-solid fa-circle-info"></i> <b>ملاحظة:</b> لا تشارك هذا المفتاح مع أي شخص، فهو خاص بحسابك فقط.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><i class="fa-solid fa-rocket"></i> كيفية استخدام التطبيق</h2>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-number"><i class="fa-solid fa-upload"></i></div>
+        <div class="step-content">
+          <h3>رفع الملفات</h3>
+          <p>يمكنك سحب وإفلات الصور أو ملفات PDF في المربع المخصص، أو الضغط عليه لاختيار ملف من جهازك.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number"><i class="fa-solid fa-camera"></i></div>
+        <div class="step-content">
+          <h3>المسح عبر الهاتف</h3>
+          <p>إذا كنت تستخدم الهاتف، اضغط على أيقونة الكاميرا لالتقاط صورة مباشرة للمستند، أو أيقونة الرفع لاختيار ملف PDF مخزن.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div class="step-content">
+          <h3>المعالجة والتعديل</h3>
+          <p>بعد انتهاء المعالجة، سيظهر النص في المحرر. يمكنك تعديله، إضافة روابط، أو تنسيقه (عريض، مائل، إلخ).</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number"><i class="fa-solid fa-file-export"></i></div>
+        <div class="step-content">
+          <h3>الحفظ والطباعة</h3>
+          <p>بمجرد الانتهاء، يمكنك تحميل النص كملف نصي (.txt) أو طباعته مباشرة عبر أيقونات الأدوات.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    تطبيق OCR المدعوم بالذكاء الاصطناعي © 2024
+  </div>
+</div>
+
+</body>
+</html>
+
